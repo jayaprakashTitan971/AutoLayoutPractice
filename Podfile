@@ -7,6 +7,6 @@ target 'Task 4 - RealmSwift' do
 
   # Pods for Task 4 - RealmSwift
 
-  pod 'RealmSwift', '~>10'
+  pod 'RealmSwift', '~>3.20.0'
 
 end

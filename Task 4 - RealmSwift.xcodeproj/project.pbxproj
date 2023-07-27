@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		242E285CFCA55E2F96C79C29 /* Pods_Task_4___RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405620D1847C3612921D816D /* Pods_Task_4___RealmSwift.framework */; };
+		B5695E932A70F6E800B31967 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695E922A70F6E800B31967 /* WatchViewModel.swift */; };
 		B584ED5C2A696D0A00DD0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584ED5B2A696D0A00DD0DE5 /* AppDelegate.swift */; };
 		B584ED5E2A696D0A00DD0DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584ED5D2A696D0A00DD0DE5 /* SceneDelegate.swift */; };
 		B584ED602A696D0A00DD0DE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584ED5F2A696D0A00DD0DE5 /* ViewController.swift */; };
 		B584ED632A696D0A00DD0DE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584ED612A696D0A00DD0DE5 /* Main.storyboard */; };
 		B584ED652A696D0B00DD0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B584ED642A696D0B00DD0DE5 /* Assets.xcassets */; };
 		B584ED682A696D0B00DD0DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584ED662A696D0B00DD0DE5 /* LaunchScreen.storyboard */; };
+		B5DB2C8A2A6FC9CA00D6079A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB2C892A6FC9CA00D6079A /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		405620D1847C3612921D816D /* Pods_Task_4___RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_4___RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		405620D1847C3612921D816D /* Pods_Task_4___RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Task_4___RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5498FD33200C03D0BE923B /* Pods-Task 4 - RealmSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 4 - RealmSwift.release.xcconfig"; path = "Target Support Files/Pods-Task 4 - RealmSwift/Pods-Task 4 - RealmSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B5695E922A70F6E800B31967 /* WatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
 		B584ED582A696D0A00DD0DE5 /* Task 4 - RealmSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task 4 - RealmSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584ED5B2A696D0A00DD0DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B584ED5D2A696D0A00DD0DE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		B584ED642A696D0B00DD0DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B584ED672A696D0B00DD0DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B584ED692A696D0B00DD0DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5DB2C892A6FC9CA00D6079A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FCE15778E097DDB918DD203A /* Pods-Task 4 - RealmSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 4 - RealmSwift.debug.xcconfig"; path = "Target Support Files/Pods-Task 4 - RealmSwift/Pods-Task 4 - RealmSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +52,14 @@
 				405620D1847C3612921D816D /* Pods_Task_4___RealmSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5695E912A70F6D300B31967 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5695E922A70F6E800B31967 /* WatchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B584ED4F2A696D0A00DD0DE5 = {
@@ -74,6 +86,8 @@
 				B584ED5B2A696D0A00DD0DE5 /* AppDelegate.swift */,
 				B584ED5D2A696D0A00DD0DE5 /* SceneDelegate.swift */,
 				B584ED5F2A696D0A00DD0DE5 /* ViewController.swift */,
+				B5695E912A70F6D300B31967 /* ViewModel */,
+				B5DB2C882A6FC9B200D6079A /* Model */,
 				B584ED612A696D0A00DD0DE5 /* Main.storyboard */,
 				B584ED642A696D0B00DD0DE5 /* Assets.xcassets */,
 				B584ED662A696D0B00DD0DE5 /* LaunchScreen.storyboard */,
@@ -82,13 +96,20 @@
 			path = "Task 4 - RealmSwift";
 			sourceTree = "<group>";
 		};
+		B5DB2C882A6FC9B200D6079A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5DB2C892A6FC9CA00D6079A /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DEE392B4D90A94745A6DA387 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				FCE15778E097DDB918DD203A /* Pods-Task 4 - RealmSwift.debug.xcconfig */,
 				AB5498FD33200C03D0BE923B /* Pods-Task 4 - RealmSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5695E932A70F6E800B31967 /* WatchViewModel.swift in Sources */,
 				B584ED602A696D0A00DD0DE5 /* ViewController.swift in Sources */,
 				B584ED5C2A696D0A00DD0DE5 /* AppDelegate.swift in Sources */,
 				B584ED5E2A696D0A00DD0DE5 /* SceneDelegate.swift in Sources */,
+				B5DB2C8A2A6FC9CA00D6079A /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
