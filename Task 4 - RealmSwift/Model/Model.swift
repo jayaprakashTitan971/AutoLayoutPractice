@@ -8,58 +8,70 @@
 import Foundation
 import RealmSwift
 
-//struct DataRecord {
-//    var metricValue: Int
-//    var timeInterval: TimeInterval
-//}
-//
-//struct HeartRateModel {
-//    var date: Date
-//    var dataRecords: [DataRecord]
-//}
-//
-//struct StepsModel {
-//    var date: Date
-//    var dataRecords: [DataRecord]
-//}
-//
-//struct Spo2Model {
-//    var date: Date
-//    var dataRecords: [DataRecord]
-//}
-//
-//struct BPModel {
-//    var date: Date
-//    var dataRecords: [DataRecord]
-//}
-//
-//struct StressModel {
-//    var date: Date
-//    var dataRecords: [DataRecord]
-//}
+struct DataRecord {
+    var metricValue: Int
+    var timeInterval: TimeInterval
+}
 
-class DataRecord: Object {
-    @objc var metricValue: Int
-    @objc var timeInterval: TimeInterval
-    
-    init(metricValue: Int, timeInterval: TimeInterval) {
-        
+struct HeartRateModel {
+    var date: Date
+    var dataRecords: [DataRecord]
+}
+
+struct StepsModel {
+    var date: Date
+    var dataRecords: [DataRecord]
+}
+
+struct Spo2Model {
+    var date: Date
+    var dataRecords: [DataRecord]
+}
+
+struct BPModel {
+    var date: Date
+    var dataRecords: [DataRecord]
+}
+
+struct StressModel {
+    var date: Date
+    var dataRecords: [DataRecord]
+}
+
+
+
+class DataRecord2: Object {
+    @objc dynamic var metricValue: Int = 0
+    @objc dynamic var timeInterval: TimeInterval = 0
+//    var parentModel = LinkingObjects(fromType: HeartRateModel2.self, property: "dataRecords")
+
+    convenience init(metricValue: Int, timeInterval: TimeInterval) {
+        self.init()
         self.metricValue = metricValue
         self.timeInterval = timeInterval
     }
+    
 }
 
-class HeartRateModel: Object {
-    
-    @objc var date: Date
-    var dataRecords = List<DataRecord>()
-    @objc var id: String {
-        return date.formatted(date: .numeric, time: .omitted)
-    }
-    
-    init(date: Date, dataRecords: List<DataRecord> = List<DataRecord>()) {
+class HeartRateModel2: Object {
+
+    @objc dynamic var date: Date = Date()
+    dynamic var dataRecords = List<DataRecord2>()
+    @objc dynamic var id: String = Date().formatted(date: .numeric, time: .omitted)
+//    {
+//        return "Hello"//date.formatted(date: .numeric, time: .omitted)
+//    }
+
+    convenience init(date: Date, dataRecords: List<DataRecord2>) {
+        self.init()
         self.date = date
         self.dataRecords = dataRecords
     }
+
+    override static func primaryKey() -> String {
+        return "id"
+    }
 }
+
+
 
