@@ -40,10 +40,12 @@ struct StressModel {
 
 
 
+
+
+
 class DataRecord2: Object {
     @objc dynamic var metricValue: Int = 0
     @objc dynamic var timeInterval: TimeInterval = 0
-//    var parentModel = LinkingObjects(fromType: HeartRateModel2.self, property: "dataRecords")
 
     convenience init(metricValue: Int, timeInterval: TimeInterval) {
         self.init()
@@ -58,9 +60,74 @@ class HeartRateModel2: Object {
     @objc dynamic var date: Date = Date()
     dynamic var dataRecords = List<DataRecord2>()
     @objc dynamic var id: String = Date().formatted(date: .numeric, time: .omitted)
-//    {
-//        return "Hello"//date.formatted(date: .numeric, time: .omitted)
-//    }
+
+    convenience init(date: Date, dataRecords: List<DataRecord2>) {
+        self.init()
+        self.date = date
+        self.dataRecords = dataRecords
+    }
+
+    override static func primaryKey() -> String {
+        return "id"
+    }
+}
+
+class StepsModel2: Object {
+
+    @objc dynamic var date: Date = Date()
+    dynamic var dataRecords = List<DataRecord2>()
+    @objc dynamic var id: String = Date().formatted(date: .numeric, time: .omitted)
+
+    convenience init(date: Date, dataRecords: List<DataRecord2>) {
+        self.init()
+        self.date = date
+        self.dataRecords = dataRecords
+    }
+
+    override static func primaryKey() -> String {
+        return "id"
+    }
+}
+
+class Spo2Model2: Object {
+
+    @objc dynamic var date: Date = Date()
+    dynamic var dataRecords = List<DataRecord2>()
+    @objc dynamic var id: String = Date().formatted(date: .numeric, time: .omitted)
+
+    convenience init(date: Date, dataRecords: List<DataRecord2>) {
+        self.init()
+        self.date = date
+        self.dataRecords = dataRecords
+    }
+
+    override static func primaryKey() -> String {
+        return "id"
+    }
+}
+
+class BPModel2: Object {
+
+    @objc dynamic var date: Date = Date()
+    dynamic var dataRecords = List<DataRecord2>()
+    @objc dynamic var id: String = Date().formatted(date: .numeric, time: .omitted)
+
+    convenience init(date: Date, dataRecords: List<DataRecord2>) {
+        self.init()
+        self.date = date
+        self.dataRecords = dataRecords
+    }
+
+    override static func primaryKey() -> String {
+        return "id"
+    }
+}
+
+class StressModel2: Object {
+
+    @objc dynamic var date: Date = Date()
+    dynamic var dataRecords = List<DataRecord2>()
+    @objc dynamic var id: String = Date().formatted(date: .numeric, time: .omitted)
 
     convenience init(date: Date, dataRecords: List<DataRecord2>) {
         self.init()
