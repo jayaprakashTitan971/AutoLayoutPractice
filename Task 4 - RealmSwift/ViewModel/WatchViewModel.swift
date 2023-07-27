@@ -10,12 +10,23 @@ import RealmSwift
 
 class WatchViewModel {
     
-    func generateMetricData(startTime: TimeInterval, endTime: TimeInterval, timeIntervalInMinutes: Int, minimumMetricValue: Int, maximumMetricValue: Int) -> List<DataRecord>{
+    func generateMetricData(startTime: TimeInterval, endTime: TimeInterval, timeIntervalInMinutes: Int, minimumMetricValue: Int, maximumMetricValue: Int) -> [DataRecord]{
         
-        var dataRecords = RealmSwift.List<DataRecord>()
+        var dataRecords = [DataRecord]()
         
         for i in stride(from: startTime, through: endTime, by: Double.Stride(timeIntervalInMinutes*60)) {
             dataRecords.append(DataRecord(metricValue: Int.random(in: minimumMetricValue...maximumMetricValue), timeInterval: i))
+        }
+        return dataRecords
+        
+    }
+    
+    func generateMetricDataForDB(startTime: TimeInterval, endTime: TimeInterval, timeIntervalInMinutes: Int, minimumMetricValue: Int, maximumMetricValue: Int) -> List<DataRecord2>{
+        
+        var dataRecords = List<DataRecord2>()
+        
+        for i in stride(from: startTime, through: endTime, by: Double.Stride(timeIntervalInMinutes*60)) {
+            dataRecords.append(DataRecord2(metricValue: Int.random(in: minimumMetricValue...maximumMetricValue), timeInterval: i))
         }
         return dataRecords
         
